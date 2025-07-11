@@ -52,5 +52,21 @@ The script exports the collected data to a CSV file with the following columns:
 | LastAccessDate | Date when the file was last accessed (based on audit logs) |
 
 ## 📁 Example Output Location
+C:\Users<UserName>\Downloads\SharePoint_FileSizes.csv
+
+
+## ⏱ Performance Considerations
+
+- Limits each document library to the first **200 files** to improve speed.
+- Audit log search result is capped at **5000 entries** — may need pagination for larger environments.
+- File path matching is case-insensitive but strict; paths must match exactly.
+
+## 🚀 How to Run
+
+```powershell
+# 1. Open PowerShell with admin rights
+# 2. Run the script
+# 3. Log in when prompted
+# 4. Wait for the script to process all document libraries
 
 
